@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.p1 {
+    color: #EB1241;
+    color: #191726;
+    color: #53334E;
+    color: #994F63;
+    color: #D77964;
+    color: #FAB35F;
+    color: #F9F871;
+}
+
+
+.p2 {
+    color: #191726;
+    color: #b9d6f2;
+    color: #006daa;
+    color: #ce8147;
+    color: #ecdd7b;
+}
+@layer components {
+    .nav {
+        @apply container flex items-center py-4 mt-4;
+    }
+    .nav-title {
+        @apply uppercase font-inter font-bold text-2xl ;
+    }
+    .nav-list {
+        @apply hidden flex-1 justify-end gap-4 uppercase;
+    }
+    .nav-icon {
+        @apply text-2xl  flex flex-1 justify-end;
+    }
+
+    .left-container {
+        @apply container flex flex-col-reverse items-center gap-12 mt-14;
+    }
+    .right-container {
+        @apply container flex flex-col items-center gap-12 mt-14;
+    }
+    .content {
+        @apply flex flex-1 flex-col items-center;
+    }
+    .title {
+        @apply text-3xl text-center font-bold mb-6;
+    }
+    .description {
+        @apply text-lg text-center mb-6;
+    }
+
+    .keiko-place {
+        @apply flex flex-col items-center text-center mt-4 mb-4;
+    }
+
+    .faq {
+        @apply  flex flex-col mt-12 mx-auto;
+    }
+    .faq-item {
+        @apply flex items-center border-b p-4;
+    }
+}
