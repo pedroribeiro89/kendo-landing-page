@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br" class="dark">
+<html lang="pt-br" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,26 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../dist/styles.css">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
     <title>KendoBH</title>
 </head>
 <body class="bg-gradient-to-b from-kendoblue-500 to-kendoblue-900 font-ubuntu text-white">
 
     <header>
         <nav class="nav sm:mt-12">
-            <h1 class="nav-title lg:text-4xl">Kendo Belo Horizonte</h1>
-            <ul class="nav-list sm:flex lg:gap-8">
-                <li class="cursor-pointer"> kendo </li>
-                <li class="cursor-pointer"> iaido </li>
-                <li class="cursor-pointer"> história </li>
-                <li class="cursor-pointer"> treinos </li>
-                <li class="cursor-pointer"> contato </li>
-                <li class="cursor-pointer"> faq </li>
-            </ul>
+            <img class="mr-4" src="imgs/kendobh-logo.webp" />
+            <h1 class="nav-title lg:text-4xl">KendoBH</h1>
+            <section class="nav-list sm:flex lg:gap-8">
+                <a class="cursor-pointer" href="#kendo"> kendo </a>
+                <a class="cursor-pointer" href="#iaido"> iaido </a>
+                <a class="cursor-pointer" href="#history"> história </a>
+                <a class="cursor-pointer" href="#keiko"> treinos </a>
+                <a class="cursor-pointer" href="#contact"> contato </a>
+                <a class="cursor-pointer" href="#faq"> faq </a>
+            </section>
             <i class="nav-icon fas fa-bars sm:hidden"></i>
         </nav>
     </header>
 
-    <section class="left-container lg:flex-row lg:mt-28">
+    <section id="kendo" class="left-container lg:flex-row lg:mt-28">
         <div class="content lg:items-start">
             <h2 class="title md:text-4 lg:text-5xl lg:text-left">
                 <strong lang="jp" class="text-kendo-red">剣道</strong> Kendo
@@ -47,7 +49,7 @@
         <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="imgs/kendo.jpeg"/>
     </section>
 
-    <section class="right-container lg:flex-row lg:mt-28">
+    <section id="iaido" class="right-container lg:flex-row lg:mt-28">
         <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="imgs/iaido.jpeg"/>
         <div class="content lg:items-start">
             <h2 class="title md:text-4 lg:text-5xl lg:text-left">
@@ -67,7 +69,7 @@
         </div>
     </section>
 
-    <section class="left-container lg:flex-row lg:mt-28">
+    <section id="history" class="left-container lg:flex-row lg:mt-28">
         <div class="content lg:items-start">
             <h2 class="title md:text-4 lg:text-5xl lg:text-left text-kendo-orange"> História </h2>
             <p class="description lg:text-left">
@@ -85,7 +87,7 @@
         <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="imgs/history.jpeg"/>
     </section>
 
-    <section class="container flex flex-col gap-4 mt-14">
+    <section id="keiko" class="container flex flex-col gap-4 mt-14">
         <h2 class="title md:text-4 lg:text-5xl lg:text-left">
             <strong lang="jp" class="text-kendo-lightblue">稽古</strong> Treinos
         </h2>
@@ -116,7 +118,7 @@
         </section>
     </section>
 
-    <section class="container flex flex-col gap-4 mt-14">
+    <section id="contact" class="container flex flex-col gap-4 mt-14">
         <h2 class="title md:text-4 lg:text-5xl lg:text-left"> Contato </h2>
         <p class="text-lg text-center lg:text-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -145,7 +147,7 @@
         </section>
     </section>
 
-    <section class="container flex flex-col gap-4 mt-14">
+    <section id="faq" class="container flex flex-col gap-4 mt-14 mb-14">
         <h2 class="title md:text-4 lg:text-5xl text-kendo-gray"> Dúvidas Frequentes </h2>
         <ul class="faq sm:w-3/4 lg:w-5/12">
             <li class="faq-item">
@@ -166,5 +168,16 @@
             </li>
         </ul>
     </section>
+
+    <footer class="footer md:flex-row ">
+        <img class="md:mr-4" src="imgs/cbk-logo.png" />
+        <img class="mt-4 md:mt-0 md:mr-4" src="imgs/amcnb-logo.png" />
+        <img class="mt-4 md:mt-0 md:mr-4" src="imgs/kendobh-logo.webp" />
+        <h2 class="flex-1 mt-4 mb-4 text-2xl"><strong lang="jp" class="text-kendo-red">剣道</strong> KendoBH</h2>
+        <ul class="flex gap-10 mt-12 md:mt-0">
+            <li class="text-2xl"><i class="fab fa-instagram"></i></li>
+            <li class="text-2xl"><i class="fab fa-facebook"></i></li>
+        </ul>
+    </footer>
 </body>
 </html>
