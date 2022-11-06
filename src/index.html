@@ -10,11 +10,24 @@
     <link rel="stylesheet" href="../dist/styles.css">
     <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
     <title>KendoBH</title>
+
 </head>
 <body class="bg-gradient-to-b from-kendoblue-500 to-kendoblue-900 font-ubuntu text-white">
 
+    <nav id="mobile-menu" class="hidden flex mobile-menu">
+        <i id="close-mobile-btn" class="nav-icon fas fa-xmark"></i>
+        <section class="mobile-nav-list">
+            <a class="cursor-pointer" href="#kendo"> Kendo </a>
+            <a class="cursor-pointer" href="#iaido"> Iaido </a>
+            <a class="cursor-pointer" href="#history"> História </a>
+            <a class="cursor-pointer" href="#keiko"> Treinos </a>
+            <a class="cursor-pointer" href="#contact"> Contato </a>
+            <a class="cursor-pointer" href="#faq"> FAQ </a>
+        </section>
+    </nav>
+
     <header>
-        <nav class="nav sm:mt-12">
+        <nav class="nav mt-0 sm:mt-12">
             <img class="mr-4" src="imgs/kendobh-logo.webp" />
             <h1 class="nav-title lg:text-4xl">KendoBH</h1>
             <section class="nav-list sm:flex lg:gap-8">
@@ -25,7 +38,7 @@
                 <a class="cursor-pointer" href="#contact"> contato </a>
                 <a class="cursor-pointer" href="#faq"> faq </a>
             </section>
-            <i class="nav-icon fas fa-bars sm:hidden"></i>
+            <i id="mobile-btn" class="nav-icon fas fa-bars sm:hidden"></i>
         </nav>
     </header>
 
@@ -181,3 +194,37 @@
     </footer>
 </body>
 </html>
+<script>
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const mobileMenuBtn = document.querySelector('#mobile-btn');
+    const closeMobileMenuBtn = document.querySelector('#close-mobile-btn');
+    const openMenu = () => {
+        mobileMenu.classList.remove('slide-out');
+        mobileMenu.classList.toggle('slide-in');
+        mobileMenu.classList.remove('hidden');
+        mobileMenuBtn.classList.toggle('hidden');
+    };
+    const closeMenu = () => {
+        mobileMenu.classList.remove('slide-in');
+        mobileMenu.classList.toggle('slide-out');
+        setTimeout(() => { mobileMenu.classList.add('hidden'); }, 1000);
+        mobileMenuBtn.classList.remove('hidden');
+    };
+
+    mobileMenuBtn.addEventListener('click', openMenu);
+    closeMobileMenuBtn.addEventListener('click', closeMenu);
+    const mobileNavItens = document.querySelectorAll('.mobile-nav-list>a');
+    mobileNavItens.forEach(item => {
+        item.addEventListener('click', closeMenu);
+    })
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 640) {
+            mobileMenu.classList.remove('slide-in');
+            mobileMenu.classList.add('hidden');
+        } else {
+            mobileMenuBtn.classList.remove('hidden');
+        }
+    });
+
+</script>
