@@ -165,7 +165,8 @@
         <section>
             <h3 class="faq-question" data-question="teste1">
                 <span class="flex-1">What is blablabla?</span>
-                <i class="text-kendo-gray fas fa-chevron-down"></i>
+                <i id="icon-closed-teste1" class="text-kendo-gray fas fa-chevron-down"></i>
+                <i id="icon-opened-teste1" class="text-kendo-gray fas fa-chevron-up hidden"></i>
             </h3>
             <p id="answer-teste1" class="faq-answer hidden">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -177,7 +178,8 @@
         <section>
             <h3 class="faq-question" data-question="teste2">
                 <span class="flex-1">What is blablabla?</span>
-                <i class="text-kendo-gray fas fa-chevron-down"></i>
+                <i id="icon-closed-teste2" class="text-kendo-gray fas fa-chevron-down"></i>
+                <i id="icon-opened-teste2" class="text-kendo-gray fas fa-chevron-up hidden"></i>
             </h3>
             <p id="answer-teste2" class="faq-answer hidden">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -189,13 +191,13 @@
     </section>
 
     <footer class="footer md:flex-row ">
-        <img class="md:mr-4 fade-animation" style="animation-delay: 0.2s" src="imgs/cbk-logo.png" />
-        <img class="mt-4 md:mt-0 md:mr-4 fade-animation" style="animation-delay: 0.4s" src="imgs/amcnb-logo.png" />
-        <img class="mt-4 md:mt-0 md:mr-4 fade-animation" style="animation-delay: 0.6s" src="imgs/kendobh-logo.webp" />
+        <img class="md:mr-4 fade-animation cursor-pointer" style="animation-delay: 0.2s" src="imgs/cbk-logo.png" />
+        <img class="mt-4 md:mt-0 md:mr-4 fade-animation cursor-pointer" style="animation-delay: 0.4s" src="imgs/amcnb-logo.png" />
+        <img class="mt-4 md:mt-0 md:mr-4 fade-animation cursor-pointer" style="animation-delay: 0.6s" src="imgs/kendobh-logo.webp" />
         <h2 class="flex-1 mt-4 mb-4 text-2xl fade-animation" style="animation-delay: 0.8s"><strong lang="jp" class="text-kendo-red">剣道</strong> KendoBH</h2>
         <ul class="flex gap-10 mt-12 md:mt-0 fade-animation" style="animation-delay: 1s">
-            <li class="text-2xl"><i class="fab fa-instagram"></i></li>
-            <li class="text-2xl"><i class="fab fa-facebook"></i></li>
+            <li class="text-2xl"><i class="fab fa-instagram cursor-pointer"></i></li>
+            <li class="text-2xl"><i class="fab fa-facebook cursor-pointer"></i></li>
         </ul>
     </footer>
 </body>
@@ -239,11 +241,17 @@
     const openCloseAnswer = (questionName) => {
         if (questionName) {
             let answer = document.querySelector(`#answer-${questionName}`);
+            let openedIcon = document.querySelector(`#icon-opened-${questionName}`);
+            let closedIcon = document.querySelector(`#icon-closed-${questionName}`);
             if (answer.classList.contains('hidden')) {
                 answer.classList.remove('hidden');
                 answer.classList.remove('close-answer');
+                openedIcon.classList.remove('hidden');
+                closedIcon.classList.toggle('hidden');
                 answer.classList.toggle('open-answer');
             } else {
+                openedIcon.classList.toggle('hidden');
+                closedIcon.classList.remove('hidden');
                 answer.classList.remove('open-answer');
                 answer.classList.toggle('close-answer');
                 answer.classList.toggle('hidden');
@@ -252,7 +260,6 @@
     }
     const faqQuestions = document.querySelectorAll('[data-question]');
     faqQuestions.forEach(question => {
-        console.log(question.dataset['question'])
         question.addEventListener('click', () => openCloseAnswer(question.dataset['question']));
     });
 
