@@ -162,24 +162,30 @@
 
     <section id="faq" class="container flex flex-col gap-4 mt-14 mb-14 fade-animation">
         <h2 class="title md:text-4 lg:text-5xl text-kendo-gray"> Dúvidas Frequentes </h2>
-        <ul class="faq sm:w-3/4 lg:w-5/12">
-            <li class="faq-item">
+        <section>
+            <h3 class="faq-question" data-question="teste1">
                 <span class="flex-1">What is blablabla?</span>
                 <i class="text-kendo-gray fas fa-chevron-down"></i>
-            </li>
-            <li class="faq-item">
+            </h3>
+            <p id="answer-teste1" class="faq-answer hidden">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            </p>
+        </section>
+        <section>
+            <h3 class="faq-question" data-question="teste2">
                 <span class="flex-1">What is blablabla?</span>
                 <i class="text-kendo-gray fas fa-chevron-down"></i>
-            </li>
-            <li class="faq-item">
-                <span class="flex-1">What is blablabla?</span>
-                <i class="text-kendo-gray fas fa-chevron-down"></i>
-            </li>
-            <li class="faq-item">
-                <span class="flex-1">What is blablabla?</span>
-                <i class="text-kendo-gray fas fa-chevron-down"></i>
-            </li>
-        </ul>
+            </h3>
+            <p id="answer-teste2" class="faq-answer hidden">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            </p>
+        </section>
     </section>
 
     <footer class="footer md:flex-row ">
@@ -195,6 +201,7 @@
 </body>
 </html>
 <script>
+    //Mobile menu
     const mobileMenu = document.querySelector('#mobile-menu');
     const mobileMenuBtn = document.querySelector('#mobile-btn');
     const closeMobileMenuBtn = document.querySelector('#close-mobile-btn');
@@ -225,6 +232,28 @@
         } else {
             mobileMenuBtn.classList.remove('hidden');
         }
+    });
+</script>
+<script>
+    //FAQ
+    const openCloseAnswer = (questionName) => {
+        if (questionName) {
+            let answer = document.querySelector(`#answer-${questionName}`);
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                answer.classList.remove('close-answer');
+                answer.classList.toggle('open-answer');
+            } else {
+                answer.classList.remove('open-answer');
+                answer.classList.toggle('close-answer');
+                answer.classList.toggle('hidden');
+            }
+        }
+    }
+    const faqQuestions = document.querySelectorAll('[data-question]');
+    faqQuestions.forEach(question => {
+        console.log(question.dataset['question'])
+        question.addEventListener('click', () => openCloseAnswer(question.dataset['question']));
     });
 
 </script>

@@ -68,6 +68,32 @@
     animation: slide-out 1000ms ease;
 }
 
+@keyframes open-answer {
+    0% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes close-answer {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.open-answer {
+    animation: open-answer 1000ms ease;
+    display: inherit;
+}
+
+.close-answer {
+    animation: close-answer 1000ms ease;
+}
+
 @layer components {
     .mobile-menu {
         transition: 1000ms ease all;
@@ -111,11 +137,14 @@
         @apply flex flex-col items-center text-center mt-4 mb-4;
     }
 
-    .faq {
-        @apply  flex flex-col mt-12 mx-auto;
+    .faq-question {
+        @apply flex m-auto text-2xl w-3/4;
     }
-    .faq-item {
-        @apply flex items-center border-b p-4;
+    .faq-answer {
+        /*max-height: 0;*/
+        /*overflow: hidden;*/
+        transition: 1000ms ease max-height;
+        @apply w-3/4 mx-auto my-1 text-base;
     }
 
     .footer {
