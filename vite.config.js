@@ -1,6 +1,15 @@
+import { createHtmlPlugin } from 'vite-plugin-html'
+
 export default {
     root: 'src',
     build: {
-        outDir: '../dist'
-    }
+        outDir: '../dist',
+        emptyOutDir: true,
+        minify: 'terser'
+    },
+    plugins: [
+        createHtmlPlugin({
+            minify: true,
+        })
+    ]
 }
