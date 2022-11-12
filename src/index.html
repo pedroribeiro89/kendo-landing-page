@@ -1,265 +1,203 @@
-<!doctype html>
-<html lang="pt-br" class="dark scroll-smooth">
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/e53ca8c342.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../dist/styles.css">
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <title>KendoBH</title>
+  </head>
+  <body class="bg-gradient-to-b from-kendoblue-500 to-kendoblue-900 font-ubuntu text-white">
 
-</head>
-<body class="bg-gradient-to-b from-kendoblue-500 to-kendoblue-900 font-ubuntu text-white">
-
-    <nav id="mobile-menu" class="hidden flex mobile-menu">
-        <i id="close-mobile-btn" class="nav-icon fa-solid fa-x"></i>
-        <section class="mobile-nav-list">
-            <a class="cursor-pointer" href="#kendo"> Kendo </a>
-            <a class="cursor-pointer" href="#iaido"> Iaido </a>
-            <a class="cursor-pointer" href="#history"> História </a>
-            <a class="cursor-pointer" href="#keiko"> Treinos </a>
-            <a class="cursor-pointer" href="#contact"> Contato </a>
-            <a class="cursor-pointer" href="#faq"> FAQ </a>
-        </section>
+    <nav id="mobile-menu" class="hidden flex z-10 flex-col fixed h-full w-full bg-black bg-opacity-50 justify-center p-8 transition-all duration-1000 ease-in-out">
+      <i id="close-mobile-btn" class="text-2xl flex flex-1 justify-end fa-solid fa-x"></i>
+      <section class="flex flex-col items-center p-4 gap-6 font-bold text-3xl">
+        <a class="cursor-pointer" href="#kendo"> Kendo </a>
+        <a class="cursor-pointer" href="#iaido"> Iaido </a>
+        <a class="cursor-pointer" href="#history"> História </a>
+        <a class="cursor-pointer" href="#keiko"> Treinos </a>
+        <a class="cursor-pointer" href="#contact"> Contato </a>
+        <a class="cursor-pointer" href="#faq"> FAQ </a>
+      </section>
     </nav>
 
     <header>
-        <nav class="nav mt-0 sm:mt-12">
-            <img class="mr-4" src="imgs/kendobh-logo.webp" />
-            <h1 class="nav-title lg:text-4xl">KendoBH</h1>
-            <section class="nav-list sm:flex lg:gap-8">
-                <a class="cursor-pointer" href="#kendo"> kendo </a>
-                <a class="cursor-pointer" href="#iaido"> iaido </a>
-                <a class="cursor-pointer" href="#history"> história </a>
-                <a class="cursor-pointer" href="#keiko"> treinos </a>
-                <a class="cursor-pointer" href="#contact"> contato </a>
-                <a class="cursor-pointer" href="#faq"> faq </a>
-            </section>
-            <i id="mobile-btn" class="nav-icon fa-solid fa-bars sm:hidden"></i>
-        </nav>
+      <nav class="container flex items-center py-4 mt-4 mt-0 sm:mt-12">
+        <img class="mr-4" src="assets/kendobh-logo.webp" />
+        <h1 class="uppercase font-inter font-bold text-2xl lg:text-4xl">KendoBH</h1>
+        <section class="hidden flex-1 justify-end gap-4 uppercase sm:flex lg:gap-8">
+          <a class="cursor-pointer" href="#kendo"> kendo </a>
+          <a class="cursor-pointer" href="#iaido"> iaido </a>
+          <a class="cursor-pointer" href="#history"> história </a>
+          <a class="cursor-pointer" href="#keiko"> treinos </a>
+          <a class="cursor-pointer" href="#contact"> contato </a>
+          <a class="cursor-pointer" href="#faq"> faq </a>
+        </section>
+        <i id="mobile-btn" class="text-2xl flex flex-1 justify-end fa-solid fa-bars sm:hidden"></i>
+      </nav>
     </header>
 
-    <section id="kendo" class="left-container lg:flex-row lg:mt-28">
-        <div class="content lg:items-start">
-            <h2 class="title md:text-4 lg:text-5xl lg:text-left">
-                <strong lang="jp" class="text-kendo-red">剣道</strong> Kendo
-            </h2>
-            <p class="description lg:text-left">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            </p>
-        </div>
-        <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="imgs/kendo.jpeg"/>
+    <section id="kendo" class="container flex flex-col-reverse items-center gap-12 mt-14 fade-animation lg:flex-row lg:mt-28">
+      <div class="flex flex-1 flex-col items-center lg:items-start">
+        <h2 class="text-3xl text-center font-bold mb-6 md:text-4 lg:text-5xl lg:text-left">
+          <strong lang="jp" class="text-kendo-red">剣道</strong> Kendo
+        </h2>
+        <p class="text-lg text-center mb-6 lg:text-left">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        </p>
+      </div>
+      <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="assets/kendo.jpeg"/>
     </section>
 
-    <section id="iaido" class="right-container lg:flex-row lg:mt-28">
-        <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="imgs/iaido.jpeg"/>
-        <div class="content lg:items-start">
-            <h2 class="title md:text-4 lg:text-5xl lg:text-left">
-                <strong lang="jp" class="text-kendo-yellow">居合道</strong> Iaido
-            </h2>
-            <p class="description lg:text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            </p>
-        </div>
+    <section id="iaido" class="container flex flex-col items-center gap-12 mt-14 fade-animation lg:flex-row lg:mt-28">
+      <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="assets/iaido.jpeg"/>
+      <div class="flex flex-1 flex-col items-center lg:items-start">
+        <h2 class="text-3xl text-center font-bold mb-6 md:text-4 lg:text-5xl lg:text-left">
+          <strong lang="jp" class="text-kendo-yellow">居合道</strong> Iaido
+        </h2>
+        <p class="text-lg text-center mb-6 lg:text-left">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        </p>
+      </div>
     </section>
 
-    <section id="history" class="left-container lg:flex-row lg:mt-28">
-        <div class="content lg:items-start">
-            <h2 class="title md:text-4 lg:text-5xl lg:text-left text-kendo-orange"> História </h2>
-            <p class="description lg:text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            </p>
-        </div>
-        <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="imgs/history.jpeg"/>
+    <section id="history" class="container flex flex-col-reverse items-center gap-12 mt-14 fade-animation lg:flex-row lg:mt-28">
+      <div class="flex flex-1 flex-col items-center lg:items-start">
+        <h2 class="text-3xl text-center font-bold mb-6 md:text-4 lg:text-5xl lg:text-left text-kendo-orange"> História </h2>
+        <p class="text-lg text-center mb-6 lg:text-left">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        </p>
+      </div>
+      <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="assets/history.jpeg"/>
     </section>
 
     <section id="keiko" class="container flex flex-col gap-4 mt-14 fade-animation">
-        <h2 class="title md:text-4 lg:text-5xl lg:text-left">
-            <strong lang="jp" class="text-kendo-lightblue">稽古</strong> Treinos
-        </h2>
-        <p class="text-lg text-center lg:text-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        </p>
-        <section class="md:flex md:gap-4 lg:flex lg:gap-4">
-            <div class="keiko-place">
-                <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="imgs/matsuoka.jpeg" />
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                </p>
-            </div>
-            <div class="keiko-place">
-                <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="imgs/amcnb.png" />
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                </p>
-            </div>
-        </section>
+      <h2 class="text-3xl text-center font-bold mb-6 md:text-4 lg:text-5xl lg:text-left">
+        <strong lang="jp" class="text-kendo-lightblue">稽古</strong> Treinos
+      </h2>
+      <p class="text-lg text-center lg:text-left">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      </p>
+      <section class="md:flex md:gap-4 lg:flex lg:gap-4">
+        <div class="flex flex-col items-center text-center mt-4 mb-4">
+          <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="assets/matsuoka.jpeg" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          </p>
+        </div>
+        <div class="flex flex-col items-center text-center mt-4 mb-4">
+          <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="assets/amcnb.png" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          </p>
+        </div>
+      </section>
     </section>
 
     <section id="contact" class="container flex flex-col gap-4 mt-14 fade-animation">
-        <h2 class="title md:text-4 lg:text-5xl lg:text-left"> Contato </h2>
-        <p class="text-lg text-center lg:text-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        </p>
-        <section class="md:flex md:gap-4 lg:flex lg:gap-4">
-            <div class="keiko-place">
-                <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="imgs/matsuoka.jpeg" />
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                </p>
-            </div>
-            <div class="keiko-place">
-                <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="imgs/amcnb.png" />
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                </p>
-            </div>
-        </section>
+      <h2 class="text-3xl text-center font-bold mb-6 md:text-4 lg:text-5xl lg:text-left"> Contato </h2>
+      <p class="text-lg text-center lg:text-left">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      </p>
+      <section class="md:flex md:gap-4 lg:flex lg:gap-4">
+        <div class="flex flex-col items-center text-center mt-4 mb-4">
+          <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="assets/matsuoka.jpeg" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          </p>
+        </div>
+        <div class="flex flex-col items-center text-center mt-4 mb-4">
+          <img class="mb-10 md:mb-16 lg:mb-0 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-1/2" src="assets/amcnb.png" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          </p>
+        </div>
+      </section>
     </section>
 
     <section id="faq" class="container flex flex-col gap-4 mt-14 mb-14 fade-animation">
-        <h2 class="title md:text-4 lg:text-5xl text-kendo-gray"> Dúvidas Frequentes </h2>
-        <section>
-            <h3 class="faq-question" data-question="teste1">
-                <span class="flex-1">What is blablabla?</span>
-                <i id="icon-closed-teste1" class="text-kendo-gray fa-solid fa-chevron-down"></i>
-                <i id="icon-opened-teste1" class="text-kendo-gray fa-solid fa-chevron-up hidden"></i>
-            </h3>
-            <p id="answer-teste1" class="faq-answer hidden">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            </p>
-        </section>
-        <section>
-            <h3 class="faq-question" data-question="teste2">
-                <span class="flex-1">What is blablabla?</span>
-                <i id="icon-closed-teste2" class="text-kendo-gray fa-solid fa-chevron-down"></i>
-                <i id="icon-opened-teste2" class="text-kendo-gray fa-solid fa-chevron-up hidden"></i>
-            </h3>
-            <p id="answer-teste2" class="faq-answer hidden">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            </p>
-        </section>
+      <h2 class="text-3xl text-center font-bold mb-6 md:text-4 lg:text-5xl text-kendo-gray"> Dúvidas Frequentes </h2>
+      <section>
+        <h3 class="flex m-auto text-2xl w-3/4 cursor-pointer" data-question="teste1">
+          <span class="flex-1">What is blablabla?</span>
+          <i id="icon-closed-teste1" class="text-kendo-gray fa-solid fa-chevron-down"></i>
+          <i id="icon-opened-teste1" class="text-kendo-gray fa-solid fa-chevron-up hidden"></i>
+        </h3>
+        <p id="answer-teste1" class="w-3/4 mx-auto my-1 text-base hidden">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        </p>
+      </section>
+      <section>
+        <h3 class="flex m-auto text-2xl w-3/4 cursor-pointer" data-question="teste2">
+          <span class="flex-1">What is blablabla?</span>
+          <i id="icon-closed-teste2" class="text-kendo-gray fa-solid fa-chevron-down"></i>
+          <i id="icon-opened-teste2" class="text-kendo-gray fa-solid fa-chevron-up hidden"></i>
+        </h3>
+        <p id="answer-teste2" class="w-3/4 mx-auto my-1 text-base hidden">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        </p>
+      </section>
     </section>
 
-    <footer class="footer md:flex-row ">
-        <img class="md:mr-4 fade-animation cursor-pointer" style="animation-delay: 0.2s" src="imgs/cbk-logo.png" />
-        <img class="mt-4 md:mt-0 md:mr-4 fade-animation cursor-pointer" style="animation-delay: 0.4s" src="imgs/amcnb-logo.png" />
-        <img class="mt-4 md:mt-0 md:mr-4 fade-animation cursor-pointer" style="animation-delay: 0.6s" src="imgs/kendobh-logo.webp" />
-        <h2 class="flex-1 mt-4 mb-4 text-2xl fade-animation" style="animation-delay: 0.8s"><strong lang="jp" class="text-kendo-red">剣道</strong> KendoBH</h2>
-        <ul class="flex gap-10 mt-12 md:mt-0 fade-animation" style="animation-delay: 1s">
-            <li class="text-2xl"><i class="fa-brands fa-instagram cursor-pointer"></i></li>
-            <li class="text-2xl"><i class="fa-brands fa-facebook cursor-pointer"></i></li>
-        </ul>
+    <footer class="py-8 container flex flex-col items-center md:flex-row ">
+      <img class="md:mr-4 fade-animation cursor-pointer" style="animation-delay: 0.2s" src="assets/cbk-logo.png" />
+      <img class="mt-4 md:mt-0 md:mr-4 fade-animation cursor-pointer" style="animation-delay: 0.4s" src="assets/amcnb-logo.png" />
+      <img class="mt-4 md:mt-0 md:mr-4 fade-animation cursor-pointer" style="animation-delay: 0.6s" src="assets/kendobh-logo.webp" />
+      <h2 class="flex-1 mt-4 mb-4 text-2xl fade-animation" style="animation-delay: 0.8s"><strong lang="jp" class="text-kendo-red">剣道</strong> KendoBH</h2>
+      <ul class="flex gap-10 mt-12 md:mt-0 fade-animation" style="animation-delay: 1s">
+        <li class="text-2xl"><i class="fa-brands fa-instagram cursor-pointer"></i></li>
+        <li class="text-2xl"><i class="fa-brands fa-facebook cursor-pointer"></i></li>
+      </ul>
     </footer>
-</body>
+
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
-<script>
-    //Mobile menu
-    const mobileMenu = document.querySelector('#mobile-menu');
-    const mobileMenuBtn = document.querySelector('#mobile-btn');
-    const closeMobileMenuBtn = document.querySelector('#close-mobile-btn');
-    const openMenu = () => {
-        mobileMenu.classList.remove('slide-out');
-        mobileMenu.classList.toggle('slide-in');
-        mobileMenu.classList.remove('hidden');
-        mobileMenuBtn.classList.toggle('hidden');
-    };
-    const closeMenu = () => {
-        mobileMenu.classList.remove('slide-in');
-        mobileMenu.classList.toggle('slide-out');
-        setTimeout(() => { mobileMenu.classList.add('hidden'); }, 1000);
-        mobileMenuBtn.classList.remove('hidden');
-    };
-
-    mobileMenuBtn.addEventListener('click', openMenu);
-    closeMobileMenuBtn.addEventListener('click', closeMenu);
-    const mobileNavItens = document.querySelectorAll('.mobile-nav-list>a');
-    mobileNavItens.forEach(item => {
-        item.addEventListener('click', closeMenu);
-    })
-
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 640) {
-            mobileMenu.classList.remove('slide-in');
-            mobileMenu.classList.add('hidden');
-        } else {
-            mobileMenuBtn.classList.remove('hidden');
-        }
-    });
-</script>
-<script>
-    //FAQ
-    const openCloseAnswer = (questionName) => {
-        if (questionName) {
-            let answer = document.querySelector(`#answer-${questionName}`);
-            let openedIcon = document.querySelector(`#icon-opened-${questionName}`);
-            let closedIcon = document.querySelector(`#icon-closed-${questionName}`);
-            if (answer.classList.contains('hidden')) {
-                answer.classList.remove('hidden');
-                answer.classList.remove('close-answer');
-                openedIcon.classList.remove('hidden');
-                closedIcon.classList.toggle('hidden');
-                answer.classList.toggle('open-answer');
-            } else {
-                openedIcon.classList.toggle('hidden');
-                closedIcon.classList.remove('hidden');
-                answer.classList.remove('open-answer');
-                answer.classList.toggle('close-answer');
-                answer.classList.toggle('hidden');
-            }
-        }
-    }
-    const faqQuestions = document.querySelectorAll('[data-question]');
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => openCloseAnswer(question.dataset['question']));
-    });
-
-</script>
