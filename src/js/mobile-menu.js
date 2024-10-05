@@ -1,6 +1,7 @@
 const mobileMenu = document.querySelector('#mobile-menu');
 const mobileMenuBtn = document.querySelector('#mobile-btn');
 const closeMobileMenuBtn = document.querySelector('#close-mobile-btn');
+const mobileLinksContainer = document.querySelector('#links-container');
 
 const openMenu = () => {
     mobileMenu.classList.remove('slide-out');
@@ -30,3 +31,7 @@ window.addEventListener("resize", () => {
         mobileMenuBtn.classList.remove('hidden');
     }
 });
+
+
+mobileLinksContainer.querySelectorAll('a')
+    .forEach(link => link.addEventListener('click', closeMenu));
