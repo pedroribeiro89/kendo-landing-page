@@ -14,7 +14,6 @@
   <body class="bg-gradient-to-b from-kendoblue-500 to-kendoblue-900 font-ubuntu text-white">
 
     <nav id="mobile-menu" class="hidden flex z-10 flex-col fixed h-full w-full bg-black bg-opacity-50 justify-center p-8 transition-all duration-1000 ease-in-out">
-<!--      <i id="close-mobile-btn" class="text-2xl flex flex-1 justify-end fa-solid fa-x"></i>-->
       <svg id="close-mobile-btn" class="text-2xl flex ml-auto justify-end bi bi-x-lg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
         <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
       </svg>
@@ -38,7 +37,6 @@
           <a class="cursor-pointer" href="#keiko"> treinos/contato </a>
           <a class="cursor-pointer" href="#faq"> faq </a>
         </section>
-<!--        <i id="mobile-btn" class="text-2xl flex flex-1 justify-end fa-solid fa-bars sm:hidden"></i>-->
         <svg id="mobile-btn" class="text-2xl flex ml-auto justify-end sm:hidden bi bi-list" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
         </svg>
@@ -216,8 +214,12 @@
       <section>
         <h3 class="flex m-auto text-2xl w-3/4 cursor-pointer" data-question="q1">
           <span class="flex-1">O que preciso para iniciar os treinos?</span>
-          <i id="icon-closed-q1" class="text-kendo-gray fa-solid fa-chevron-down"></i>
-          <i id="icon-opened-q1" class="text-kendo-gray fa-solid fa-chevron-up hidden"></i>
+          <svg id="icon-closed-q1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+          </svg>
+          <svg id="icon-opened-q1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-up hidden" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+          </svg>
         </h3>
         <p id="answer-q1" class="w-3/4 mx-auto my-1 text-base hidden">
           Para iniciar, primeiro você deve entrar em contato e marcar uma aula experimental que geralmente acontecem nas
@@ -228,24 +230,33 @@
       <section>
         <h3 class="flex m-auto text-2xl w-3/4 cursor-pointer" data-question="q2">
           <span class="flex-1">Quem pode participar?</span>
-          <i id="icon-closed-q2" class="text-kendo-gray fa-solid fa-chevron-down"></i>
-          <i id="icon-opened-q2" class="text-kendo-gray fa-solid fa-chevron-up hidden"></i>
+          <svg id="icon-closed-q2" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+          </svg>
+          <svg id="icon-opened-q2" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-up hidden" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+          </svg>
         </h3>
         <p id="answer-q2" class="w-3/4 mx-auto my-1 text-base hidden">
           O kendo pode ser praticado por todos, de crianças até adultos, desde que não possua nenhuma condição médica
-          que não o permita. O kendo é um exercício aerópico exigente e muito técnico e exige disciplina para poder evoluir.
+          que não o permita. O kendo é um exercício aeróbico exigente e muito técnico e exige disciplina para poder evoluir.
         </p>
       </section>
       <section>
         <h3 class="flex m-auto text-2xl w-3/4 cursor-pointer" data-question="q3">
           <span class="flex-1">Quanto custa treinar?</span>
-          <i id="icon-closed-q3" class="text-kendo-gray fa-solid fa-chevron-down"></i>
-          <i id="icon-opened-q3" class="text-kendo-gray fa-solid fa-chevron-up hidden"></i>
+          <svg id="icon-closed-q3" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+          </svg>
+          <svg id="icon-opened-q3" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-up hidden" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+          </svg>
         </h3>
         <p id="answer-q3" class="w-3/4 mx-auto my-1 text-base hidden">
-          Atualmente cobramos R$ 100,00 de matrícula e R$ 50,00 de mensalidade incuido todos os treinos de todas modalidades.
-          Também existem semestralidades para a confederação mas são bem baratas. Somos um grupo voluntário e todos os valores
-          são usados para o próprio grupo (manutenção do dojo, visitas de senseis de fora, etc).
+          Atualmente cobramos R$ 120,00 de matrícula e R$ 70,00 de mensalidade incluído todos os treinos de todas modalidades.
+          Também está incluso a filiação a confederação brasileira, permitindo participar de eventos oficiais.
+          Somos um grupo voluntário e todos os valores são usados para o próprio grupo
+          (manutenção do dojo, visitas de professores de fora, etc).
         </p>
       </section>
     </section>
