@@ -1,0 +1,20 @@
+---
+// src/components/ui/SectionHeader.astro
+interface Props {
+  number: string;
+  eyebrow: string;
+  accent: "red" | "gold" | "neutral";
+}
+const { number, eyebrow, accent } = Astro.props;
+
+const accentColor =
+  accent === "red"
+    ? "var(--color-kendo-red)"
+    : accent === "gold"
+    ? "var(--color-iaido-gold)"
+    : "var(--color-iaido-gold)"; /* neutral sections still use gold for the number */
+---
+<p class="flex items-center gap-3 text-[length:var(--text-eyebrow)] tracking-[0.35em] uppercase font-bold">
+  <span class="text-[var(--color-ink-500)]">{number}</span>
+  <span style={`color: ${accentColor}`}>{eyebrow}</span>
+</p>
