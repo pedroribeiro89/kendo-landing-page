@@ -1,5 +1,6 @@
 ---
 // src/pages/index.astro
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/nav/Header.astro";
 import Hero from "../components/sections/Hero.astro";
@@ -9,11 +10,22 @@ import History from "../components/sections/History.astro";
 import Keiko from "../components/sections/Keiko.astro";
 import Faq from "../components/sections/Faq.astro";
 import Footer from "../components/nav/Footer.astro";
+import { buildOrganizationJsonLd, buildDojoJsonLd } from "../lib/seo";
+
+const dojos = await getCollection("dojos");
+const orgLd = buildOrganizationJsonLd({ siteUrl: Astro.site!.toString().replace(/\/$/, "") });
+const dojoLds = dojos.map((d) => buildDojoJsonLd(d.data));
 ---
 <BaseLayout
   title="Kendo e Iaido em Belo Horizonte · KendoBH"
   description="Grupo de kendo e iaido tradicionais em Belo Horizonte, vinculado à Confederação Brasileira de Kendo desde 2008. Marque uma aula experimental."
 >
+  <Fragment slot="head">
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(orgLd)} />
+    {dojoLds.map((ld) => (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(ld)} />
+    ))}
+  </Fragment>
   <Header slot="header" />
   <Hero />
   <Kendo />
