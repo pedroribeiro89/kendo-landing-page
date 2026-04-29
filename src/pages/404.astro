@@ -1,0 +1,27 @@
+---
+// src/pages/404.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/nav/Header.astro";
+import Footer from "../components/nav/Footer.astro";
+---
+<BaseLayout
+  title="Página não encontrada · KendoBH"
+  description="A página solicitada não existe."
+>
+  <Header slot="header" />
+  <section class="container-page py-32 sm:py-48 text-center">
+    <p class="text-[length:var(--text-eyebrow)] tracking-[0.4em] uppercase font-bold text-[var(--color-iaido-gold)] mb-6">
+      404
+    </p>
+    <h1 class="font-[family-name:var(--font-display)] font-extrabold leading-[0.95] tracking-[-0.025em] text-[length:var(--text-h2)] mb-6">
+      Caminho não encontrado.
+    </h1>
+    <p class="text-[var(--color-ink-300)] max-w-md mx-auto mb-10">
+      A página que você procura não existe. Volte ao início para explorar as modalidades, treinos e contatos.
+    </p>
+    <a href="/" class="inline-flex items-center gap-2 rounded bg-[var(--color-kendo-red)] px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[var(--color-paper)]">
+      Ir para o início
+    </a>
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>
