@@ -201,7 +201,7 @@ Both fonts self-hosted as variable fonts. Subset to Latin Extended (full PT-BR c
 ### 7.4 Iaido section (mirrors Kendo, gold accent)
 
 - Eyebrow: `02 · IAIDO`
-- Heading: `Iaido` (gold) + `居合道` (small inline annotation in gold), then a 2-line subhead in white — parallel structure to the Kendo heading. Suggested copy: "a meditação / em movimento." Final wording confirmed during implementation.
+- Heading: `Iaido` (gold) + `居合道` (small inline annotation in gold), then a 2-line subhead in white — parallel structure to the Kendo heading. Copy: "arte de sacar / a espada."
 - Thin gold rule (48px × 2px) under heading — mirrors Kendo's red rule
 - Body: 3 paragraphs, max 58ch width, `--color-ink-300`. Existing copy preserved.
 - Inline links use gold accent
