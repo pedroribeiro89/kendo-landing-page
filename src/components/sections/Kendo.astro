@@ -1,0 +1,69 @@
+---
+// src/components/sections/Kendo.astro
+import { Image } from "astro:assets";
+import { getEntry, render } from "astro:content";
+import SectionHeader from "../ui/SectionHeader.astro";
+import kendoPhoto from "../../assets/kendo.webp";
+
+const entry = await getEntry("sections", "kendo");
+if (!entry) throw new Error("Missing 'kendo' section content");
+const { Content } = await render(entry);
+const { eyebrowNumber, eyebrow, accent, kanji } = entry.data;
+---
+<section id="kendo" class="relative overflow-hidden py-[var(--section-gap)]">
+  <div aria-hidden="true" lang="ja" class="ghost-kanji text-[length:var(--text-kanji)] text-[var(--color-kendo-red)] -right-[6%] -top-[5%]">
+    {kanji}
+  </div>
+
+  <div class="container-page relative z-10 grid gap-14 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:items-start">
+    <div>
+      <SectionHeader number={eyebrowNumber} eyebrow={eyebrow} accent={accent} />
+
+      <h2 class="font-[family-name:var(--font-display)] font-extrabold leading-[0.95] tracking-[-0.025em] text-[length:var(--text-h2)] mt-6 mb-2">
+        <span class="text-[var(--color-kendo-red)]">Kendo</span>
+        <span lang="ja" class="text-[var(--color-kendo-red)] text-[0.45em] tracking-[0.1em] align-middle ml-2 opacity-90 font-semibold">{kanji}</span>
+        <br />
+        <span class="text-[var(--color-paper)]">o caminho</span>
+        <br />
+        <span class="text-[var(--color-paper)]">da espada.</span>
+      </h2>
+
+      <div class="w-12 h-[2px] bg-[var(--color-kendo-red)] my-8" aria-hidden="true"></div>
+
+      <div class="prose-section text-[length:var(--text-body)] leading-[1.7] text-[var(--color-ink-300)] max-w-[58ch]">
+        <Content />
+      </div>
+    </div>
+
+    <figure class="relative">
+      <div aria-hidden="true" class="absolute -left-2 -top-2 w-16 h-16 border-t-2 border-l-2 border-[var(--color-kendo-red)]"></div>
+      <Image
+        src={kendoPhoto}
+        alt="Praticantes de kendo em luta usando bogu e shinai"
+        widths={[400, 600, 800, 1200]}
+        sizes="(max-width: 1024px) 90vw, 45vw"
+        class="aspect-[4/5] w-full object-cover rounded-[var(--radius-md)]"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+</section>
+
+<style>
+  .prose-section :global(p) {
+    margin-bottom: 1.125rem;
+  }
+  .prose-section :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  .prose-section :global(a) {
+    color: var(--color-kendo-red);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-kendo-red) 35%, transparent);
+    transition: border-color 0.2s ease;
+  }
+  .prose-section :global(a:hover) {
+    border-bottom-color: var(--color-kendo-red);
+  }
+</style>
