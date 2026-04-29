@@ -1,6 +1,24 @@
 /* src/styles/global.css */
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Inter Variable";
+  src: url("/fonts/InterVariable.woff2") format("woff2-variations"),
+       url("/fonts/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/fonts/CabinetGrotesk-Variable.woff2") format("woff2-variations"),
+       url("/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   /* canvas */
   --color-ink-950: #050507;
@@ -36,8 +54,6 @@
   /* shared */
   --radius-md: 0.375rem;
 }
-
-/* font faces are added in Task 4 once the woff2 files exist */
 
 /* base layer overrides */
 @layer base {
