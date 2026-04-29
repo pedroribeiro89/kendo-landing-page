@@ -1,10 +1,12 @@
 ---
 // src/pages/index.astro
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/nav/Header.astro";
 ---
 <BaseLayout
   title="Kendo e Iaido em Belo Horizonte · KendoBH"
   description="Grupo de kendo e iaido tradicionais em Belo Horizonte, vinculado à Confederação Brasileira de Kendo desde 2008. Marque uma aula experimental."
 >
-  <p class="container-page py-16">Em construção.</p>
+  <Header slot="header" />
+  <p class="container-page py-32 text-center">Em construção.</p>
 </BaseLayout>

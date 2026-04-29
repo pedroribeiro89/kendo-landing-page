@@ -1,0 +1,66 @@
+---
+// src/components/nav/Header.astro
+const navLinks = [
+  { href: "#kendo", label: "Kendo" },
+  { href: "#iaido", label: "Iaido" },
+  { href: "#history", label: "História" },
+  { href: "#keiko", label: "Treinos / Contato" },
+  { href: "#faq", label: "FAQ" },
+];
+---
+<header class="absolute inset-x-0 top-0 z-40">
+  <div class="container-page flex items-center justify-between py-5">
+    <a href="#" class="flex items-baseline gap-2 text-[var(--color-paper)]" aria-label="KendoBH — início">
+      <span lang="ja" class="text-xl text-[var(--color-kendo-red)] font-[family-name:var(--font-display)] font-bold">剣</span>
+      <span class="font-[family-name:var(--font-display)] font-bold tracking-tight uppercase text-base sm:text-lg">KendoBH</span>
+    </a>
+
+    {/* Desktop nav */}
+    <nav aria-label="Navegação principal" class="hidden md:flex items-center gap-7">
+      {navLinks.map((l) => (
+        <a href={l.href} class="text-xs uppercase tracking-[0.2em] text-[var(--color-ink-300)] hover:text-[var(--color-paper)] transition-colors">
+          {l.label}
+        </a>
+      ))}
+    </nav>
+
+    {/* Mobile menu — <details>-based */}
+    <details id="mobile-menu" class="md:hidden relative">
+      <summary class="list-none flex items-center justify-center w-10 h-10 rounded text-[var(--color-paper)] hover:bg-[var(--color-ink-800)] cursor-pointer" aria-label="Abrir menu">
+        <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+      </summary>
+
+      <nav aria-label="Navegação principal" class="fixed inset-0 z-50 bg-[var(--color-ink-950)]/95 backdrop-blur-sm flex flex-col items-center justify-center gap-8 p-8">
+        <button type="button" data-close-menu class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded text-[var(--color-paper)]" aria-label="Fechar menu">
+          <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+        </button>
+
+        {navLinks.map((l) => (
+          <a href={l.href} class="text-2xl font-[family-name:var(--font-display)] font-bold uppercase tracking-tight text-[var(--color-paper)]">
+            {l.label}
+          </a>
+        ))}
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script is:inline>
+  // Close <details> mobile menu when a nav link is clicked, or when the
+  // explicit close button is clicked. ~150 bytes minified.
+  (function () {
+    var menu = document.getElementById("mobile-menu");
+    if (!menu) return;
+    menu.addEventListener("click", function (e) {
+      var target = e.target;
+      if (!target) return;
+      if (target.tagName === "A" || target.closest("[data-close-menu]")) {
+        menu.open = false;
+      }
+    });
+  })();
+</script>
