@@ -1,0 +1,41 @@
+[
+  {
+    "id": "matsuoka",
+    "name": "Matsuoka Budokai",
+    "address": {
+      "street": "R. Barão de Leopoldina, 130",
+      "neighborhood": "Alto dos Pinheiros",
+      "city": "Belo Horizonte",
+      "state": "MG"
+    },
+    "geo": {
+      "lat": -19.9166667,
+      "lng": -43.9333333
+    },
+    "photo": "matsuoka.webp",
+    "schedule": [
+      { "day": "Quarta-feira", "time": "20:00–21:30", "modality": "iaido" },
+      { "day": "Quinta-feira", "time": "20:00–21:30", "modality": "kendo" },
+      { "day": "Sábado", "time": "09:30–11:00", "modality": "iaido" },
+      { "day": "Domingo", "time": "10:00–12:00", "modality": "kendo" }
+    ]
+  },
+  {
+    "id": "amcnb",
+    "name": "AMCNB",
+    "address": {
+      "street": "R. Dom Lourenço de Almeida, 535",
+      "neighborhood": "Nova Cachoeirinha",
+      "city": "Belo Horizonte",
+      "state": "MG"
+    },
+    "geo": {
+      "lat": -19.8853,
+      "lng": -43.9658
+    },
+    "photo": "amcnb.webp",
+    "schedule": [
+      { "day": "Terça-feira", "time": "20:00–21:30", "modality": "kendo" }
+    ]
+  }
+]
