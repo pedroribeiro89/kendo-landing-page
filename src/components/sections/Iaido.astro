@@ -1,0 +1,69 @@
+---
+// src/components/sections/Iaido.astro
+import { Image } from "astro:assets";
+import { getEntry, render } from "astro:content";
+import SectionHeader from "../ui/SectionHeader.astro";
+import iaidoPhoto from "../../assets/iaido.webp";
+
+const entry = await getEntry("sections", "iaido");
+if (!entry) throw new Error("Missing 'iaido' section content");
+const { Content } = await render(entry);
+const { eyebrowNumber, eyebrow, accent, kanji } = entry.data;
+---
+<section id="iaido" class="relative overflow-hidden py-[var(--section-gap)]">
+  <div aria-hidden="true" lang="ja" class="ghost-kanji text-[length:var(--text-kanji)] text-[var(--color-iaido-gold)] -left-[6%] -top-[5%]">
+    {kanji}
+  </div>
+
+  <div class="container-page relative z-10 grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-16 lg:items-start">
+    <figure class="relative order-1 lg:order-none">
+      <div aria-hidden="true" class="absolute -right-2 -top-2 w-16 h-16 border-t-2 border-r-2 border-[var(--color-iaido-gold)]"></div>
+      <Image
+        src={iaidoPhoto}
+        alt="Praticante de iaido executando um corte com a espada"
+        widths={[400, 600, 800, 1200]}
+        sizes="(max-width: 1024px) 90vw, 45vw"
+        class="aspect-[4/5] w-full object-cover rounded-[var(--radius-md)]"
+        loading="lazy"
+      />
+    </figure>
+
+    <div>
+      <SectionHeader number={eyebrowNumber} eyebrow={eyebrow} accent={accent} />
+
+      <h2 class="font-[family-name:var(--font-display)] font-extrabold leading-[0.95] tracking-[-0.025em] text-[length:var(--text-h2)] mt-6 mb-2">
+        <span class="text-[var(--color-iaido-gold)]">Iaido</span>
+        <span lang="ja" class="text-[var(--color-iaido-gold)] text-[0.45em] tracking-[0.1em] align-middle ml-2 opacity-90 font-semibold">{kanji}</span>
+        <br />
+        <span class="text-[var(--color-paper)]">arte de sacar</span>
+        <br />
+        <span class="text-[var(--color-paper)]">a espada.</span>
+      </h2>
+
+      <div class="w-12 h-[2px] bg-[var(--color-iaido-gold)] my-8" aria-hidden="true"></div>
+
+      <div class="prose-section-gold text-[length:var(--text-body)] leading-[1.7] text-[var(--color-ink-300)] max-w-[58ch]">
+        <Content />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .prose-section-gold :global(p) {
+    margin-bottom: 1.125rem;
+  }
+  .prose-section-gold :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  .prose-section-gold :global(a) {
+    color: var(--color-iaido-gold);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-iaido-gold) 35%, transparent);
+    transition: border-color 0.2s ease;
+  }
+  .prose-section-gold :global(a:hover) {
+    border-bottom-color: var(--color-iaido-gold);
+  }
+</style>
