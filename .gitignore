@@ -26,3 +26,4 @@ dist-ssr
 .scratch/
 .astro/
 .claude/
+.lighthouseci/
