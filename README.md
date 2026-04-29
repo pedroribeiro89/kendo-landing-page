@@ -1,27 +1,41 @@
-# Kendo Landing Page
+# KendoBH Landing Page
 
-Landing page for the belo horizonte's kendo club.
+Single-page site for the Belo Horizonte kendo and iaido group.
 
-style: tailwind
+Built with [Astro](https://astro.build) (static), [Tailwind CSS v4](https://tailwindcss.com), and self-hosted variable fonts. Deployed on Netlify free tier. PT-BR only.
 
-js-minify: terser
+## Develop
 
-html-minify: vite-plugin-html
-
-Running:
-```console
-npm run dev:
+```sh
+pnpm install
+pnpm dev          # http://localhost:4321
 ```
 
-Building:
-```console
-npm run build
+## Build
+
+```sh
+pnpm build        # static output in ./dist
+pnpm preview      # serve dist locally
 ```
 
-running final bundle:
-```console
-npm run preview
+## Tests
+
+```sh
+pnpm test         # unit tests (vitest, src/lib/seo.ts)
+pnpm test:e2e     # Playwright e2e: mobile menu + FAQ keyboard
+pnpm lh           # Lighthouse CI against preview
+pnpm check        # Astro / TypeScript type check
 ```
 
-Icons: font awesome, hosted on pedro account
+## Content
 
+PT-BR copy lives in `src/content/`:
+- `sections/*.md` — long-form copy per section
+- `dojos.json` — dojo data (address, geo, schedule)
+- `faq.json` — FAQ entries
+
+Edit these files; no need to touch components.
+
+## Branch policy
+
+Production site is on `main`. The Astro rewrite lives on `test-ai`. Do not merge until the Netlify deploy preview has been visually approved.

@@ -27,3 +27,5 @@ dist-ssr
 .astro/
 .claude/
 .lighthouseci/
+test-results/
+playwright-report/
