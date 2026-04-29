@@ -20,3 +20,20 @@ test("mobile menu close button works", async ({ page }) => {
   await page.locator("[data-close-menu]").click();
   await expect(page.locator("#mobile-menu")).toHaveJSProperty("open", false);
 });
+
+test("mobile menu toggles aria-expanded and supports Escape", async ({ page }) => {
+  await page.goto("/");
+  const summary = page.locator("#mobile-menu > summary");
+
+  await expect(summary).toHaveAttribute("aria-expanded", "false");
+
+  await summary.focus();
+  await page.keyboard.press("Enter");
+  await expect(summary).toHaveAttribute("aria-expanded", "true");
+  await expect(summary).toHaveAttribute("aria-label", "Fechar menu");
+
+  await page.keyboard.press("Escape");
+  await expect(summary).toHaveAttribute("aria-expanded", "false");
+  await expect(summary).toHaveAttribute("aria-label", "Abrir menu");
+  await expect(page.locator("#mobile-menu")).toHaveJSProperty("open", false);
+});

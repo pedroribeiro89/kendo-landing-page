@@ -26,13 +26,13 @@ const navLinks = [
 
     {/* Mobile menu — <details>-based */}
     <details id="mobile-menu" class="md:hidden relative">
-      <summary class="list-none flex items-center justify-center w-10 h-10 rounded text-[var(--color-paper)] hover:bg-[var(--color-ink-800)] cursor-pointer" aria-label="Abrir menu">
+      <summary class="list-none flex items-center justify-center w-10 h-10 rounded text-[var(--color-paper)] hover:bg-[var(--color-ink-800)] cursor-pointer" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu-panel">
         <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
           <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
         </svg>
       </summary>
 
-      <nav aria-label="Navegação principal" class="fixed inset-0 z-50 bg-[var(--color-ink-950)]/95 backdrop-blur-sm flex flex-col items-center justify-center gap-8 p-8">
+      <nav id="mobile-menu-panel" aria-label="Navegação principal" role="dialog" aria-modal="true" class="fixed inset-0 z-50 bg-[var(--color-ink-950)]/95 backdrop-blur-sm flex flex-col items-center justify-center gap-8 p-8 overflow-y-auto">
         <button type="button" data-close-menu class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded text-[var(--color-paper)]" aria-label="Fechar menu">
           <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
             <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
@@ -50,16 +50,46 @@ const navLinks = [
 </header>
 
 <script is:inline>
-  // Close <details> mobile menu when a nav link is clicked, or when the
-  // explicit close button is clicked. ~150 bytes minified.
   (function () {
     var menu = document.getElementById("mobile-menu");
     if (!menu) return;
+    var summary = menu.querySelector("summary");
+    var main = document.getElementById("main");
+
+    function close() {
+      menu.open = false;
+    }
+
     menu.addEventListener("click", function (e) {
       var target = e.target;
-      if (!target) return;
+      if (!target || target.nodeType !== 1) return;
       if (target.tagName === "A" || target.closest("[data-close-menu]")) {
-        menu.open = false;
+        close();
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && menu.open) close();
+    });
+
+    menu.addEventListener("toggle", function () {
+      var isOpen = menu.open;
+      if (summary) {
+        summary.setAttribute("aria-expanded", String(isOpen));
+        summary.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+      }
+      if (main) {
+        if (isOpen) {
+          main.setAttribute("inert", "");
+        } else {
+          main.removeAttribute("inert");
+        }
+      }
+      if (isOpen) {
+        var closeBtn = menu.querySelector("[data-close-menu]");
+        if (closeBtn) closeBtn.focus();
+      } else if (summary) {
+        summary.focus();
       }
     });
   })();
