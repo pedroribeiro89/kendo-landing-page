@@ -16,7 +16,7 @@ const { eyebrowNumber, eyebrow, accent, kanji } = entry.data;
   </div>
 
   <div class="container-page relative z-10 grid gap-14 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:items-start">
-    <div>
+    <div class="order-2 lg:order-none">
       <SectionHeader number={eyebrowNumber} eyebrow={eyebrow} accent={accent} />
 
       <h2 class="font-[family-name:var(--font-display)] font-extrabold leading-[0.95] tracking-[-0.025em] text-[length:var(--text-h2)] mt-6 mb-2">
@@ -35,7 +35,7 @@ const { eyebrowNumber, eyebrow, accent, kanji } = entry.data;
       </div>
     </div>
 
-    <figure class="relative">
+    <figure class="relative order-1 lg:order-none">
       <div aria-hidden="true" class="absolute -left-2 -top-2 w-16 h-16 border-t-2 border-l-2 border-[var(--color-kendo-red)]"></div>
       <Image
         src={kendoPhoto}
