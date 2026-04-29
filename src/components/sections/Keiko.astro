@@ -19,9 +19,7 @@ const photoMap: Record<string, ImageMetadata> = {
 };
 ---
 <section id="keiko" class="relative overflow-hidden py-[var(--section-gap)]">
-  <div aria-hidden="true" lang="ja" class="ghost-kanji text-[length:var(--text-kanji)] text-[var(--color-iaido-gold)] -left-[6%] top-[5%] opacity-[0.04]">
-    {kanji}
-  </div>
+  <div aria-hidden="true" lang="ja" class="ghost-kanji text-[length:var(--text-kanji)] text-[var(--color-iaido-gold)] -left-[6%] top-[5%] opacity-[0.04]" data-kanji={kanji}></div>
 
   <div class="container-page relative z-10">
     <SectionHeader number={eyebrowNumber} eyebrow={eyebrow} accent={accent} />

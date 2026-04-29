@@ -11,9 +11,7 @@ const { Content } = await render(entry);
 const { eyebrowNumber, eyebrow, accent, kanji } = entry.data;
 ---
 <section id="history" class="relative overflow-hidden py-[var(--section-gap)]">
-  <div aria-hidden="true" lang="ja" class="ghost-kanji text-[length:var(--text-kanji)] text-[var(--color-paper)] -right-[8%] top-[10%] opacity-[0.04]">
-    {kanji}
-  </div>
+  <div aria-hidden="true" lang="ja" class="ghost-kanji text-[length:var(--text-kanji)] text-[var(--color-iaido-gold)] -right-[8%] top-[10%] opacity-[0.04]" data-kanji={kanji}></div>
 
   <div class="container-page relative z-10">
     <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-end">
