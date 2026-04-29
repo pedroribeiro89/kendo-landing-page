@@ -1,0 +1,52 @@
+---
+// src/components/ui/DojoCard.astro
+import { Image } from "astro:assets";
+
+interface ScheduleItem {
+  day: string;
+  time: string;
+  modality: "kendo" | "iaido";
+}
+interface Props {
+  name: string;
+  street: string;
+  neighborhood: string;
+  city: string;
+  state: string;
+  schedule: ScheduleItem[];
+  photo: ImageMetadata;
+  photoAlt: string;
+}
+const { name, street, neighborhood, city, state, schedule, photo, photoAlt } = Astro.props;
+---
+<article class="rounded-[var(--radius-md)] border border-[var(--color-ink-700)] bg-[var(--color-ink-800)] overflow-hidden transition-colors hover:border-[var(--color-iaido-gold)] focus-within:border-[var(--color-iaido-gold)]">
+  <Image
+    src={photo}
+    alt={photoAlt}
+    widths={[400, 600, 800]}
+    sizes="(max-width: 768px) 90vw, 45vw"
+    class="aspect-[16/9] w-full object-cover"
+    loading="lazy"
+  />
+  <div class="p-6">
+    <h3 class="font-[family-name:var(--font-display)] font-bold text-[length:var(--text-h3)] tracking-[-0.015em] text-[var(--color-paper)]">{name}</h3>
+    <address class="not-italic text-sm text-[var(--color-ink-300)] leading-relaxed mt-2 mb-5">
+      {street}<br />
+      {neighborhood} · {city} / {state}
+    </address>
+    <ul class="grid gap-1.5 pt-4 border-t border-[var(--color-ink-700)] text-sm">
+      {schedule.map((s) => (
+        <li class="grid grid-cols-[1fr_auto_auto] gap-x-4 items-center">
+          <span class="text-[var(--color-ink-100)] font-medium">{s.day}</span>
+          <span class="text-[var(--color-ink-500)] tabular-nums">{s.time}</span>
+          <span
+            class="text-[10px] tracking-[0.2em] uppercase font-bold"
+            style={`color: ${s.modality === "kendo" ? "var(--color-kendo-red)" : "var(--color-iaido-gold)"}`}
+          >
+            {s.modality === "kendo" ? "Kendo" : "Iaido"}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</article>

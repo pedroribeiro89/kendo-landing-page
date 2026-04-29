@@ -1,0 +1,91 @@
+---
+// src/components/sections/Keiko.astro
+import { getCollection, getEntry, render } from "astro:content";
+import SectionHeader from "../ui/SectionHeader.astro";
+import DojoCard from "../ui/DojoCard.astro";
+import ContactCard from "../ui/ContactCard.astro";
+import matsuokaPhoto from "../../assets/matsuoka.webp";
+import amcnbPhoto from "../../assets/amcnb.webp";
+
+const entry = await getEntry("sections", "keiko");
+if (!entry) throw new Error("Missing 'keiko' section content");
+const { Content } = await render(entry);
+const { eyebrowNumber, eyebrow, accent, kanji, lede } = entry.data;
+
+const dojos = await getCollection("dojos");
+const photoMap: Record<string, ImageMetadata> = {
+  "matsuoka.webp": matsuokaPhoto,
+  "amcnb.webp": amcnbPhoto,
+};
+---
+<section id="keiko" class="relative overflow-hidden py-[var(--section-gap)]">
+  <div aria-hidden="true" lang="ja" class="ghost-kanji text-[length:var(--text-kanji)] text-[var(--color-iaido-gold)] -left-[6%] top-[5%] opacity-[0.04]">
+    {kanji}
+  </div>
+
+  <div class="container-page relative z-10">
+    <SectionHeader number={eyebrowNumber} eyebrow={eyebrow} accent={accent} />
+
+    <div class="mt-6 grid gap-10 lg:grid-cols-2 lg:items-end">
+      <h2 class="font-[family-name:var(--font-display)] font-extrabold leading-[0.95] tracking-[-0.025em] text-[length:var(--text-h2)] text-[var(--color-paper)]">
+        Onde<br />treinamos.
+        <span lang="ja" class="text-[var(--color-iaido-gold)] text-[0.4em] tracking-[0.1em] align-middle ml-2 opacity-90 font-semibold">{kanji}</span>
+      </h2>
+      {lede && (
+        <p class="text-[length:var(--text-lede)] text-[var(--color-ink-300)] leading-relaxed max-w-[50ch]">{lede}</p>
+      )}
+    </div>
+
+    <div class="mt-12 prose-keiko text-[length:var(--text-body)] leading-[1.7] text-[var(--color-ink-300)] grid gap-x-12 gap-y-4 md:grid-cols-2 max-w-none">
+      <Content />
+    </div>
+
+    <div class="mt-14 grid gap-8 sm:grid-cols-2">
+      {dojos.map((d) => (
+        <DojoCard
+          name={d.data.name}
+          street={d.data.address.street}
+          neighborhood={d.data.address.neighborhood}
+          city={d.data.address.city}
+          state={d.data.address.state}
+          schedule={d.data.schedule}
+          photo={photoMap[d.data.photo]}
+          photoAlt={`Foto do dojo ${d.data.name}`}
+        />
+      ))}
+    </div>
+
+    <div class="mt-14 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
+      <ContactCard
+        href="mailto:kendobeaga@gmail.com"
+        label="Email"
+        value="kendobeaga@gmail.com"
+        icon="email"
+      />
+      <ContactCard
+        href="https://wa.me/553172445435"
+        label="WhatsApp"
+        value="+55 (31) 7244-5435"
+        icon="whatsapp"
+      />
+      <ContactCard
+        href="https://www.instagram.com/kendobh/"
+        label="Instagram"
+        value="@kendobh"
+        icon="instagram"
+      />
+      <ContactCard
+        href="https://www.facebook.com/KendoBH"
+        label="Facebook"
+        value="/KendoBH"
+        icon="facebook"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .prose-keiko :global(p) {
+    margin: 0;
+  }
+</style>
