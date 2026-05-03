@@ -86,4 +86,18 @@ const photoMap: Record<string, ImageMetadata> = {
   .prose-keiko :global(p) {
     margin: 0;
   }
+  .prose-keiko :global(strong) {
+    color: var(--color-paper);
+    font-weight: 700;
+  }
+  .prose-keiko :global(a) {
+    color: var(--color-iaido-gold);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-iaido-gold) 35%, transparent);
+    transition: border-color 0.2s ease;
+  }
+  .prose-keiko :global(a:hover) {
+    border-bottom-color: var(--color-iaido-gold);
+  }
 </style>

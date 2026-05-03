@@ -7,8 +7,14 @@ kanji: 稽古
 lede: "Recebemos novos alunos sempre nas últimas aulas do mês. Marque uma aula experimental por qualquer um dos canais abaixo."
 ---
 
-A matrícula é de R$ 120,00 e a mensalidade de R$ 70,00. Como o kendo é totalmente voluntário e sem fins lucrativos, todos os valores são usados para o próprio grupo. Emprestamos os equipamentos até você poder comprar o seu, mas exigimos que compre a shinai depois das primeiras aulas por ser um item pessoal de desgaste. Os valores incluem a filiação à Confederação Brasileira de Kendo, permitindo participar de eventos oficiais.
+**AMCNB** — Aulas gratuitas de kendo e iaido. Após começar a treinar, é necessário se associar à instituição (aproximadamente R$ 30,00).
 
-Os requisitos para treinar são roupas adequadas para exercícios físicos e muita vontade de treinar. O kendo pode ser praticado por qualquer pessoa e em qualquer idade — necessidades especiais devem ser avaliadas pelo instrutor responsável, com a devida orientação médica.
+**Matsuoka Budokai** — Matrícula de R$ 150,00 e mensalidade de R$ 125,00. Quem também treina às terças-feiras na AMCNB tem o valor da associação descontado da mensalidade.
 
-O treino prático de kendo usa keikogi e hakama, armadura de proteção (bogu) e a espada de treino (shinai). Também há treinos de kata utilizando a espada de madeira maciça (bokuto/boken). O treino dura de 1h30 a 2h, com alongamento, treino de golpes básicos e treino prático entre todos os alunos. No iaido se treinam movimentos básicos e katas, alternando entre dias de Seitei Iai e Mugai-ryu — iniciantes usam bokuto e saya (bainha); somente avançados utilizam espada de metal.
+**Filiação à [CBK](https://www.instagram.com/cbkendo/)** — R$ 120,00 semestrais, necessária para participar de eventos oficiais. Para alunos do Matsuoka, já está incluída na mensalidade.
+
+O kendo é totalmente voluntário e sem fins lucrativos — todos os valores são usados para o próprio grupo. Emprestamos os equipamentos até você poder comprar o seu, mas a shinai precisa ser comprada após as primeiras aulas por ser um item pessoal de desgaste.
+
+Os treinos duram de 1h30 a 2h, com alongamento, golpes básicos e prática entre os alunos. No kendo se usa keikogi, hakama, bogu (armadura) e shinai (espada de bambu). No iaido se alternam dias de Seitei e Mugai-ryu — iniciantes usam bokuto e saya, somente avançados utilizam espada de metal. Pode ser praticado em qualquer idade — basta roupa confortável e vontade de treinar.
+
+Datas das próximas aulas experimentais no nosso [Instagram](https://www.instagram.com/kendobh/).
