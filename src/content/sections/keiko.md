@@ -9,7 +9,9 @@ lede: "Recebemos novos alunos sempre nas últimas aulas do mês. Marque uma aula
 
 **AMCNB** — Aulas gratuitas de kendo e iaido. Após começar a treinar, é necessário se associar à instituição (aproximadamente R$ 30,00).
 
-**Matsuoka Budokai** — Matrícula de R$ 150,00 e mensalidade de R$ 125,00. Quem também treina às terças-feiras na AMCNB tem o valor da associação descontado da mensalidade.
+**Matsuoka Budokai** — Matrícula de R$ 150,00 e mensalidade de R$ 125,00.
+
+**Combinado AMCNB + Matsuoka** — Quem treina nos dois dojos tem o valor da associação à AMCNB descontado da mensalidade do Matsuoka.
 
 **Filiação à [CBK](https://www.instagram.com/cbkendo/)** — R$ 120,00 semestrais, necessária para participar de eventos oficiais. Para alunos do Matsuoka, já está incluída na mensalidade.
 
