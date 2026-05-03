@@ -1,17 +1,42 @@
 [
   {
     "id": "q1",
-    "question": "O que preciso para iniciar os treinos?",
-    "answer": "Para iniciar, primeiro entre em contato e marque uma aula experimental, que geralmente acontecem nas últimas aulas do mês. As aulas experimentais começam 30 minutos antes das aulas normais, dedicados a aprender os movimentos básicos e a dinâmica do treino. Depois você pode participar normalmente das aulas."
+    "question": "Como começo a treinar?",
+    "answer": "Entre em contato pelo Instagram, WhatsApp ou e-mail para marcar uma aula experimental — as datas das próximas aulas para iniciantes ficam sempre no nosso Instagram. As experimentais começam 30 minutos antes do treino normal e são dedicadas aos movimentos básicos e à dinâmica do dojo. Depois disso, você participa das aulas regulares."
   },
   {
     "id": "q2",
-    "question": "Quem pode participar?",
-    "answer": "O kendo pode ser praticado por todos, de crianças a adultos, desde que não haja condição médica que impeça. O kendo é um exercício aeróbico exigente e muito técnico, e exige disciplina para evoluir."
+    "question": "Qual a diferença entre kendo e iaido?",
+    "answer": "Kendo é a luta com shinai (espada de bambu) e bogu (armadura), praticada em pares — dinâmico e intenso. Iaido é a prática individual de sacar, cortar e retornar a espada à bainha em movimentos precisos, sem oponente — mais introspectivo, frequentemente descrito como meditação em movimento. As duas são complementares: lados de uma mesma moeda."
   },
   {
     "id": "q3",
-    "question": "Quanto custa treinar?",
-    "answer": "Atualmente cobramos R$ 120,00 de matrícula e R$ 70,00 de mensalidade, incluindo todos os treinos de todas as modalidades. Os valores também incluem a filiação à Confederação Brasileira de Kendo, permitindo participar de eventos oficiais. Somos um grupo voluntário e todos os valores são usados para o próprio grupo (manutenção do dojo, visitas de professores de fora, etc)."
+    "question": "Posso fazer só uma das modalidades?",
+    "answer": "Sim. Você pode treinar apenas kendo, apenas iaido, ou as duas modalidades — sem custo extra. A mensalidade é a mesma independente da escolha."
+  },
+  {
+    "id": "q4",
+    "question": "Qual a idade mínima para treinar?",
+    "answer": "A partir de 8 anos, desde que acompanhados por um responsável durante o treino. A partir de 10 anos, sem necessidade de acompanhante. Não há idade máxima — recebemos praticantes de todas as idades."
+  },
+  {
+    "id": "q5",
+    "question": "Preciso comprar equipamento próprio?",
+    "answer": "No kendo, apenas a shinai (espada de bambu) precisa ser comprada após as primeiras aulas, por ser um item pessoal de desgaste. Os demais equipamentos são emprestados pelo grupo, e o professor vai orientar o momento certo de comprar cada peça — depende da evolução de cada aluno, mas costuma levar cerca de 6 meses de prática dedicada."
+  },
+  {
+    "id": "q6",
+    "question": "É perigoso? Acontecem lesões?",
+    "answer": "Como em qualquer esporte, lesões podem acontecer — mas, estatisticamente, kendo e iaido são mais seguros do que futebol ou basquete. Quando ocorrem, costumam ser por esforço, não pela luta em si. Cuidar da saúde dos colegas é prioridade máxima no dojo, e atitudes violentas são inaceitáveis."
+  },
+  {
+    "id": "q7",
+    "question": "A aula é em japonês? Preciso aprender o idioma?",
+    "answer": "A aula é em português. Os termos técnicos são em japonês e você os aprende naturalmente, no ritmo dos treinos — não é necessário estudar o idioma para começar."
+  },
+  {
+    "id": "q8",
+    "question": "Sou obrigado a competir?",
+    "answer": "Não. A competição é uma ferramenta importante de aprendizado no kendo e no iaido, mas não é o objetivo final — ninguém é obrigado nem pressionado a competir. Recomendamos a experiência para quem tem interesse, mas treinar a vida toda sem entrar em campeonato é igualmente válido."
   }
 ]
