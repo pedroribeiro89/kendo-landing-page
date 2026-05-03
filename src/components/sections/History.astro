@@ -14,17 +14,10 @@ const { eyebrowNumber, eyebrow, accent, kanji } = entry.data;
   <div aria-hidden="true" lang="ja" class="ghost-kanji text-[length:var(--text-kanji)] text-[var(--color-iaido-gold)] -right-[8%] top-[10%] opacity-[0.04]" data-kanji={kanji}></div>
 
   <div class="container-page relative z-10">
-    <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-end">
-      <div>
-        <SectionHeader number={eyebrowNumber} eyebrow={eyebrow} accent={accent} />
-        <h2 class="font-[family-name:var(--font-display)] font-extrabold leading-[0.95] tracking-[-0.025em] text-[length:var(--text-h2)] mt-6 text-[var(--color-paper)]">
-          Mais de uma década<br />no caminho.
-        </h2>
-      </div>
-      <p class="font-[family-name:var(--font-display)] font-bold text-[length:var(--text-h2)] leading-none text-[var(--color-iaido-gold)] tracking-tight">
-        2008 →
-      </p>
-    </div>
+    <SectionHeader number={eyebrowNumber} eyebrow={eyebrow} accent={accent} />
+    <h2 class="font-[family-name:var(--font-display)] font-extrabold leading-[0.95] tracking-[-0.025em] text-[length:var(--text-h2)] mt-6 text-[var(--color-paper)]">
+      Mais de uma década<br />no caminho.
+    </h2>
 
     <div class="prose-section-history mt-10 grid gap-x-12 gap-y-5 text-[length:var(--text-body)] leading-[1.7] text-[var(--color-ink-300)] md:grid-cols-2 max-w-none">
       <Content />
