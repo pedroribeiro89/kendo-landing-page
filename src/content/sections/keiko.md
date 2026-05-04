@@ -19,4 +19,4 @@ O kendo é totalmente voluntário e sem fins lucrativos — todos os valores sã
 
 Os treinos duram de 1h30 a 2h, com alongamento, golpes básicos e prática entre os alunos. No kendo se usam keikogi, hakama, bogu (armadura) e shinai (espada de bambu). No iaido se alternam dias de Seitei e Mugai-ryu — iniciantes usam bokuto e saya, somente avançados utilizam espada de metal. Pode ser praticado em qualquer idade — basta roupa confortável e vontade de treinar.
 
-Datas das próximas aulas experimentais no nosso [Instagram](https://www.instagram.com/kendobh/).
+Veja as datas das próximas aulas experimentais no [Instagram do KendoBH](https://www.instagram.com/kendobh/).
