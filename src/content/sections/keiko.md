@@ -15,7 +15,7 @@ lede: "Recebemos novos alunos sempre nas últimas aulas do mês. Marque uma aula
 
 **Filiação à [CBK](https://www.instagram.com/cbkendo/)** — R$ 120,00 semestrais, necessária para participar de eventos oficiais. Para alunos do Matsuoka, já está incluída na mensalidade.
 
-O kendo é totalmente voluntário e sem fins lucrativos — todos os valores são usados para o próprio grupo. Emprestamos os equipamentos até você poder comprar o seu, mas a shinai precisa ser comprada após as primeiras aulas por ser um item pessoal de desgaste.
+O kendo é totalmente voluntário e sem fins lucrativos — todos os valores são usados para o próprio grupo. Emprestamos os equipamentos até você poder comprar o seu, mas a shinai precisa ser comprada após as primeiras aulas por ser um item pessoal que se desgasta com o uso.
 
 Os treinos duram de 1h30 a 2h, com alongamento, golpes básicos e prática entre os alunos. No kendo se usam keikogi, hakama, bogu (armadura) e shinai (espada de bambu). No iaido se alternam dias de Seitei e Mugai-ryu — iniciantes usam bokuto e saya, somente avançados utilizam espada de metal. Pode ser praticado em qualquer idade — basta roupa confortável e vontade de treinar.
 
